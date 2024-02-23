@@ -1,9 +1,60 @@
-.hello {
-    background-color: lightblue;
-    color: blue;
-    font-size: 30px;
-    font-weight: bold;
-    border-radius: 5px;
-    margin: 5px 0 0 30px;
-    padding: 5px 15px;
+@font-face {
+    font-family: "Product Sans";
+    src: url(google-sans-cdnfonts/ProductSans-Regular.ttf);
+}
+html {
+    height: 100dvh;
+}
+body {
+    margin: 0;
+    height: 100%;
+}
+
+/* Header */
+.header {
+    font-family: 'Product Sans';
+    font-size: 24px;
+    color: #5f6368;
+    height: 56px;
+    border-bottom: 1px solid #5f6368;
+    display: flex;
+    align-items: center;
+}
+.header__logo {
+    margin: 4px 0 4px 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: all 200ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__logo:hover {
+    background-color: rgba(60, 64, 67, 0.08);
+    cursor: pointer;
+}
+.header__logo:active {
+    background-color: rgba(60, 64, 67, 0.12);
+    cursor: pointer;
+}
+.header__logo-image {
+    height: 30px;
+}
+.header__text {
+    user-select: none;
+    margin: 0 0 0 4px;
+}
+.header__text:hover {
+    cursor: pointer;
+}
+.header__text:active {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Field */
+.field {
+    height: calc(100% - 57px);
+    background-color: red;
 }
