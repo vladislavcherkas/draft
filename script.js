@@ -1,3 +1,6 @@
+class View {
+    
+}
 function start() {
     console.log('Hello, world!');
 }

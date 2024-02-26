@@ -1,26 +1,22 @@
 @font-face {
-    font-family: "Product Sans";
-    src: url(google-sans-cdnfonts/ProductSans-Regular.ttf);
-}
-@font-face {
-    font-family: "Google Sans";
-    src: url(font/GoogleSans-Medium.ttf);
+    font-family: 'Product Sans Regular';
+    src: url(fonts/product-sans/regular.ttf);
 }
 @font-face {
     font-family: "Google Sans Medium";
-    src: url(font/GoogleSans-Medium.ttf);
+    src: url(fonts/google-sans/medium.ttf);
 }
 @font-face {
     font-family: "Google Sans Regular";
-    src: url(font/GoogleSans-Regular.ttf);
+    src: url(fonts/google-sans/regular.ttf);
 }
 @font-face {
     font-family: "Google Sans Bold";
-    src: url(font/GoogleSans-Bold.ttf);
+    src: url(fonts/google-sans/bold.ttf);
 }
 @font-face {
-    font-family: Roboto;
-    src: url(Roboto/Roboto-Regular.ttf);
+    font-family: "Roboto Regular";
+    src: url(fonts/roboto/regular.ttf);
 }
 html {
     height: 100dvh;
@@ -42,7 +38,7 @@ body {
 
 /* Header */
 .header {
-    font-family: 'Product Sans';
+    font-family: 'Product Sans Regular';
     font-size: 24px;
     color: #5f6368;
     height: 56px;
@@ -94,7 +90,7 @@ body {
     height: 20px;
 }
 .header__signature {
-    font: 13px "Google Sans";
+    font: 13px "Google Sans Medium";
     color: #0000008a;
     margin: 0 0 0 4px;
 }
@@ -286,7 +282,7 @@ body {
     height: 120px;
 }
 .loading__text {
-    font-family: 'Product Sans';
+    font-family: 'Product Sans Regular';
     font-size: 35px;
     color: #5f6368;
     position: absolute;
