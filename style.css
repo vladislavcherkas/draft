@@ -24,7 +24,19 @@ html {
 body {
     margin: 0;
     height: 100%;
+}
+
+/* App */
+.app {
+    height: 100%;
+}
+.app__screens {
+    height: 0;
     position: relative;
+}
+.app__loading {
+    height: 0;
+    opacity: 0;
 }
 
 /* Screen */
@@ -34,6 +46,8 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    opacity: 0;
+    z-index: -1;
 }
 
 /* Header */
@@ -255,10 +269,6 @@ body {
     width: 120px;
     height: 120px;
     position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
 }
 .loading__border {
     width: 100px;
@@ -270,7 +280,6 @@ body {
     left: 0;
     border: 10px solid #b6a963;
     border-radius: 33px;
-    animation: 0.75s linear 0s infinite alternate pulse-loading__border;
 }
 .loading__image {
     position: absolute;
@@ -294,20 +303,4 @@ body {
     align-items: flex-end;
     justify-content: center;
     margin: 0 0 10dvh 0;
-}
-@keyframes pulse-loading__border {
-    from {
-        top: 0;
-        left: 0;
-        width: 100px;
-        height: 100px;
-        border-radius: 33px;
-    }
-    to {
-        top: -20px;
-        left: -20px;
-        width: 140px;
-        height: 140px;
-        border-radius: 51px;
-    }
 }

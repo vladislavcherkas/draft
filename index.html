@@ -9,51 +9,16 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <div class="screen">
-            <div class="header">
-                <div class="header__logo">
-                    <img class="header__logo-image" src="images/logo.png">
-                </div>
-                <div class="header__text">Черновик</div>
-                <div class="header__status">
-                    <img class="header__load" src="images/load.png">
-                    <div class="header__signature">Сохраненние</div>
-                </div>
-            </div>
-            <div class="control">
-                <div class="control__confirm">
-                    <img class="control__confirm-image" src="images/confirm.png">
-                </div>
-                <div class="control__clean">
-                    <img class="control__clean-image" src="images/clean.png">
-                </div>
-            </div>
-            <div class="field">
-                <textarea class="field__textarea" placeholder="Введите текст..."></textarea>
-            </div>
-        </div>
-        <div class="screen">
-            <div class="clean">
-                <div class="clean__background"></div>
-                <div class="clean__body">
-                    <div class="clean__block">
-                        <div class="clean__title">Вы действительно уверены?</div>
-                        <div class="clean__text">Это действие удалит все что вы написали.</div>
-                        <div class="clean__control">
-                            <div class="clean__button">Отмена</div>
-                            <div class="clean__button">Очистить</div>
-                        </div>
+        <div class="app">
+            <div class="app__screens"></div>
+            <div class="app__loading" id="loading-screen">
+                <div class="loading">
+                    <div class="loading__icon">
+                        <div class="loading__border" id="loading-border"></div>
+                        <img class="loading__image" src="images/loading.png">
                     </div>
+                    <div class="loading__text">Draft</div>
                 </div>
-            </div>
-        </div>
-        <div class="screen">
-            <div class="loading">
-                <div class="loading__icon">
-                    <div class="loading__border"></div>
-                    <img class="loading__image" src="images/loading.png">
-                </div>
-                <div class="loading__text">Draft</div>
             </div>
         </div>
     </body>
