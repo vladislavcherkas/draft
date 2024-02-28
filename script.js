@@ -1,3 +1,15 @@
+class LoadingModel {
+    static getScreensText() {
+        const BODY = new FormData();
+        BODY.append('fileAddress', 'screens.html');
+        return new Promise(resolve => {
+            fetch('controllers/file-read.php', {
+                body: BODY,
+                method: 'POST',
+            }).then(response => response.text()).then(text => resolve(text));
+        });
+    }
+}
 class LoadingView {
     static valuesRange = {
         'top': { 'start': 0, 'end': -20, 'step': 0.2 },
@@ -96,22 +108,53 @@ class LoadingView {
 }
 class LoadingController {
     static async init() {
-
+        const SCREENS_DADDY = window.document.getElementById('screens-daddy');
+        SCREENS_DADDY.innerHTML = await LoadingModel.getScreensText();
     }
 }
-class LoadingModel {
-    static getScreensText() {
-
+class HomeView {
+    static show() {
+        const HOME = window.document.getElementById('home');
+        let opacityValue = 0;
+        const OPACITY_INTERVAL = setInterval(
+            () => {
+                HOME.style.opacity = opacityValue + '%';
+                opacityValue += 10;
+                if (opacityValue === 100) {
+                    HOME.style.opacity = '100%';
+                    clearInterval(OPACITY_INTERVAL);
+                }
+            },
+            15,
+        );
+    }
+    static open() {
+        const HOME = window.document.getElementById('home');
+        HOME.style.zIndex = '0';
+    }
+    static close() {
+        const HOME = window.document.getElementById('home');
+        HOME.style.zIndex = '-1';
+    }
+}
+class DaddyView {
+    static unlock() {
+        const SCREENS_DADDY = window.document.getElementById('screens-daddy');
+        SCREENS_DADDY.style.height = '100%';
     }
 }
 async function start() {
-
-    // Test
     LoadingView.open();
     LoadingView.show();
     LoadingView.play();
+    await LoadingController.init();
     await LoadingView.stop();
     LoadingView.close();
+    DaddyView.unlock();
+    HomeView.open();
+    HomeView.show();
+
+    // Test
     console.log('Hello, world!');
 }
     
