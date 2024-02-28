@@ -265,6 +265,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 .loading__icon {
     width: 120px;
