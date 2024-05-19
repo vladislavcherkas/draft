@@ -70,6 +70,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .header__logo:hover {
     background-color: rgba(60, 64, 67, 0.08);
@@ -98,10 +99,23 @@ body {
     margin: 0 0 0 40px;
     display: flex;
     align-items: center;
+    opacity: 0;
 }
 .header__load {
     width: 20px;
     height: 20px;
+    animation-name: wheel-rotation;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes wheel-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 .header__signature {
     font: 13px "Google Sans Medium";
@@ -109,8 +123,17 @@ body {
     margin: 0 0 0 4px;
 }
 
+/* Control wrap */
+.control-wrap {
+    height: 49px;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+}
+
 /* Control */
 .control {
+    width: 100%;
     height: 48px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     display: flex;
@@ -164,6 +187,7 @@ body {
 
 /* Field */
 .field {
+    position: relative;
     height: calc(100% - 57px - 49px);
     width: 100%;
     overflow: hidden;
@@ -186,6 +210,16 @@ body {
 .field__textarea::placeholder {
     font-family: "Roboto Regular";
     color: #0000008a;
+}
+.field__glass {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    background-color: white;
 }
 
 /* Clean */
@@ -305,4 +339,16 @@ body {
     align-items: flex-end;
     justify-content: center;
     margin: 0 0 10dvh 0;
+}
+
+/* Help */
+.help {
+    background-color: #5f6368;
+    color: white;
+    border-radius: 5px;
+    padding: 4px 8px;
+    position: absolute;
+    opacity: 0;
+    font-size: 13px;
+    font-family: 'Google Sans Medium';
 }

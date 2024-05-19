@@ -1,24 +1,27 @@
 <div class="screen" id="home">
     <div class="header">
-        <div class="header__logo">
+        <div class="header__logo" id="logo">
             <img class="header__logo-image" src="images/logo.png">
         </div>
-        <div class="header__text">Черновик</div>
-        <div class="header__status">
+        <div class="header__text" id="reload">Черновик</div>
+        <div class="header__status" id="memorization">
             <img class="header__load" src="images/load.png">
             <div class="header__signature">Сохраненние</div>
         </div>
     </div>
-    <div class="control">
-        <div class="control__confirm">
-            <img class="control__confirm-image" src="images/confirm.png">
-        </div>
-        <div class="control__clean">
-            <img class="control__clean-image" src="images/clean.png">
+    <div class="control-wrap" id="control-wrap">
+        <div class="control">
+            <div class="control__confirm" id="save">
+                <img class="control__confirm-image" src="images/confirm.png">
+            </div>
+            <div class="control__clean" id="erase">
+                <img class="control__clean-image" src="images/clean.png">
+            </div>
         </div>
     </div>
-    <div class="field">
-        <textarea class="field__textarea" placeholder="Введите текст..."></textarea>
+    <div class="field" id="field">
+        <textarea class="field__textarea" id="field" placeholder="Введите текст..."></textarea>
+        <div class="field__glass" id="protective-glass"></div>
     </div>
 </div>
 <div class="screen">
