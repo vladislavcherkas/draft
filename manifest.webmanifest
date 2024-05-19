@@ -1,0 +1,15 @@
+{
+    "name": "Draft",
+    "short_name": "Draft",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Draft",
+    "icons": [
+        {
+            "src": "images/loading.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        }
+    ]
+}

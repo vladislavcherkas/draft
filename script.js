@@ -91,15 +91,7 @@ class AppView {
             }, DELAY);
         });
     }
-    static modify(id, css) {
-        `
-        .home {
-            height: 55px;
-        }
-        #protection-glass {
-            opacity: 0;
-        }
-        `;
+    static modify(css) {
         // Разделить CSS код на таблицы
         const SHEETS = [];
         let sheet = '';
@@ -110,6 +102,7 @@ class AppView {
                 sheet = '';
             }
         }
+        console.log('Sheets: ', SHEETS);
         // Обрезка в таблицах лишнего по краям
         for (let sheetIndex in SHEETS) {
             let sheet = SHEETS[sheetIndex];
@@ -143,9 +136,27 @@ class AppView {
     }
 }
 class AppViewTesting {
+    static log = {};
     static modify() {
-        
+        const CSS = `
+        .home {
+            height: 55px;
+        }
+        #protection-glass {
+            opacity: 0;
+        }
+        `;
+        AppView.modify(CSS);
     }
+}
+class CssParserModel {
+
+}
+class CssParserView {
+
+}
+class CssParserController {
+
 }
 class LoadingModel {
     static getScreensText() {
@@ -513,9 +524,6 @@ class DaddyView {
         const SCREENS_DADDY = window.document.getElementById('screens-daddy');
         SCREENS_DADDY.style.height = '100%';
     }
-}
-class Testing {
-    
 }
 async function start() {
     LoadingView.open();
